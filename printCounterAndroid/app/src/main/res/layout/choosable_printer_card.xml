@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="printer"
+            type="com.jgeig001.printcounter.ui.main.print.viewObjects.PrinterWithOwner" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="325dp"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/printer_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/printer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:hint="Druckername"
+            android:text="@{printer.name}"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/printer_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/printer_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@{printer.ownerName}"
+            android:hint="Besitzer"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/printer_icon"
+            app:layout_constraintTop_toBottomOf="@id/printer_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

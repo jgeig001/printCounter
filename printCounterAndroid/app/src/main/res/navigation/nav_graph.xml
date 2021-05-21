@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jgeig001.printcounter.ui.main.mainFragment.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_print_choose_printer_fragment"
+            app:destination="@id/printChoosePrinterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/printChoosePrinterFragment"
+        android:name="com.jgeig001.printcounter.ui.main.print.choosePrinterFragment.ChoosePrinterFragment"
+        android:label="print_choose_printer_fragment"
+        tools:layout="@layout/print_choose_printer_fragment">
+        <action
+            android:id="@+id/action_print_choose_printer_fragment_to_print_choose_color_fragment"
+            app:destination="@id/printChooseColorFragment" />
+        <action
+            android:id="@+id/action_printChoosePrinterFragment_to_printChoosePaperFragment"
+            app:destination="@id/printChoosePaperFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/printChooseColorFragment"
+        android:name="com.jgeig001.printcounter.ui.main.print.chooseColorFragment.ChooseColorFragment"
+        android:label="print_choose_color_fragment"
+        tools:layout="@layout/print_choose_color_fragment">
+        <action
+            android:id="@+id/action_print_choose_color_fragment_to_print_choose_paper_fragment"
+            app:destination="@id/printChoosePaperFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/printChoosePaperFragment"
+        android:name="com.jgeig001.printcounter.ui.main.print.choosePaperFragment.ChoosePaperFragment"
+        android:label="print_choose_paper_fragment"
+        tools:layout="@layout/print_choose_paper_fragment">
+        <action
+            android:id="@+id/action_print_choose_paper_fragment_to_print_choose_quantity_fragment"
+            app:destination="@id/printChooseQuantityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/printChooseQuantityFragment"
+        android:name="com.jgeig001.printcounter.ui.main.print.chooseQuantityFragment.ChooseQuantityFragment"
+        android:label="print_choose_quantity_fragment"
+        tools:layout="@layout/print_choose_quantity_fragment">
+        <action
+            android:id="@+id/action_printChooseQuantityFragment_to_printSummaryFragment"
+            app:destination="@id/printSummaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/printSummaryFragment"
+        android:name="com.jgeig001.printcounter.ui.main.print.chooseSummaryFragment.ChooseSummaryFragment"
+        android:label="print_summary_fragment"
+        tools:layout="@layout/print_summary_fragment">
+        <action
+            android:id="@+id/action_printSummaryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+</navigation>

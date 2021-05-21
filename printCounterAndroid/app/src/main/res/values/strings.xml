@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">print</string>
+    <string name="button_printer_text">Mein Drucker</string>
+    <string name="button_print_text">drucken</string>
+    <string name="choose_printer_label">Wähle Drucker</string>
+    <string name="new_usre_dialog">Gib deinen Nutzername an…</string>
+    <string name="confirm">Bestätigen</string>
+
+
+    <string name="overview_colortype">Druckart: %s</string>
+    <string name="overview_papertype">Papier: %s</string>
+    <string name="overview_quantitytype">Menge: %s</string>
+    <string name="overview_pages">Seiten: %d</string>
+
+</resources>
